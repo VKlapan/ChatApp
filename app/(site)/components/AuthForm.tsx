@@ -6,6 +6,8 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
 import Input from "@/app/components/inputs/Input";
+import Button from "@/app/components/Button";
+import AuthSocialButton from "./AuthSocialButton";
 
 type Variant = "LOGIN" | "REGISTER";
 
@@ -132,11 +134,11 @@ const AuthForm = () => {
             label="Password"
             type="password"
           />
-          {/* <div>
+          <div>
             <Button disabled={isLoading} fullWidth type="submit">
               {variant === "LOGIN" ? "Sign in" : "Register"}
             </Button>
-          </div> */}
+          </div>
         </form>
 
         <div className="mt-6">
@@ -159,14 +161,14 @@ const AuthForm = () => {
           </div>
 
           <div className="mt-6 flex gap-2">
-            {/* <AuthSocialButton
+            <AuthSocialButton
               icon={BsGithub}
               onClick={() => socialAction("github")}
             />
             <AuthSocialButton
               icon={BsGoogle}
               onClick={() => socialAction("google")}
-            /> */}
+            />
           </div>
         </div>
         <div
